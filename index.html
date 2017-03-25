@@ -28,6 +28,10 @@
         overflow: hidden;
       }
 
+      .chat_window-user{
+        height: 145px;
+      }
+
       .top_menu {
         background-color: #fff;
         width: 100%;
@@ -216,7 +220,7 @@
 	<body>
 
     <!--Create user-->
-    <div class="chat_window" id="join-user-window">
+    <div class="chat_window chat_window-user" id="join-user-window">
       <div class="top_menu">
           <div class="buttons">
             <div class="button close"></div>
@@ -308,7 +312,7 @@
         for(i in data){
           html += '<li>'+data[i]+'</li>'
         }
-        $('.user-list').append(html);
+        $('.user-list').html(html);
       })
 
 
